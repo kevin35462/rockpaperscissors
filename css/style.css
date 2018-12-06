@@ -8,6 +8,18 @@
   
 }
 
-h3,h4,h1{
-  text-shadow: 2px 2px 5px red;
+h1,h2,h3,h4{
+  text-shadow: 2px 2px 5px black;
+  color:white;
+}
+body{
+  background-image: url("https://media.giphy.com/media/6v8dobB4gdb8c/giphy.gif");
+  background-size:cover;
+}
+img{
+  width:900px;
+  height:350px;
+}
+html{
+  text-decoration: underline overline dotted white;
 }

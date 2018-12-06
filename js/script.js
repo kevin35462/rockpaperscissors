@@ -13,27 +13,49 @@ var randomNumber = 0;
 $(document).ready(function() {
 
     $("#shoot").click(function(){
+        
         randomNumber = Math.random();
         console.log(randomNumber);
         userChoice = $("input").val();
-        $("#userChoice").text(userChoice);
+        $("#userChoice").html("<h1>"+userChoice+"</h1>");
         
         if(randomNumber<=.33){
-            computerChoice="rock"
+            computerChoice="rock";
         }
         else if(randomNumber<=.66) {
-            computerChoice="paper"
+            computerChoice="paper";
         }
-        else if(randomNumber<=.99) {
-            computerChoice="scissors"
+        else{
+            computerChoice="scissors";
         }
         
         if(userChoice===computerChoice){
-            $("#result").text("Winner");
+            $("#result").html("<h1>Tie</h1>");
         }
-        else{
-            $("#result").text("Loser");
+         else if(userChoice==="rock"||userChoice==="Rock"){
+            if(computerChoice==="scissors"){
+                $("#result").html("<h1>Winner</h1>");
+            }
+                else{
+                    $("#result").html("<h1>loser</h1>");
         }
-    $("#computerChoice").text(computerChoice);
+        }
+         else if(userChoice==="paper"){
+            if(computerChoice==="rock"){
+                $("#result").html("<h1>Winner</h1>");
+            }
+                else{
+                    $("#result").html("<h1>loser</h1>");
+        }
+        }
+         else if(userChoice==="scissors"){
+            if(computerChoice==="paper"){
+                $("#result").html("<h1>Winner</h1>");
+            }
+                else{
+                    $("#result").html("<h1>loser</h1>");
+        }
+        }
+    $("#computerChoice").html("<h1>"+computerChoice+"</h1>");
     });
 });
